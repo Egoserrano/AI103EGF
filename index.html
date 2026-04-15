@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil de Foto Estática</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Perfil estático</p>
+        <h1>Sube tu foto</h1>
+        <p class="lead">Esta página simula la subida de una imagen con datos fijos. No se realiza ninguna consulta a base de datos.</p>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <section class="card info-card">
+        <h2>Información del perfil</h2>
+        <p>Todos los datos de este perfil son estáticos. El formulario solo maneja la vista previa de la imagen en el navegador.</p>
+
+        <div class="profile-field">
+          <span class="label">Nombre:</span>
+          <span>María López</span>
+        </div>
+        <div class="profile-field">
+          <span class="label">Título:</span>
+          <span>Diseñadora gráfica</span>
+        </div>
+        <div class="profile-field">
+          <span class="label">Ubicación:</span>
+          <span>Barcelona, España</span>
+        </div>
+        <div class="profile-field">
+          <span class="label">Descripción:</span>
+          <span>Experta en branding y diseño visual con más de 8 años de experiencia.</span>
+        </div>
+      </section>
+
+      <section class="card upload-card">
+        <h2>Sube tu foto de perfil</h2>
+        <p>Selecciona una imagen de tu equipo para ver cómo quedaría en el perfil. La acción es solo de cliente.</p>
+
+        <form id="upload-form">
+          <div class="file-group">
+            <input id="photo-input" type="file" accept="image/png, image/jpeg, image/webp" />
+            <label for="photo-input" class="file-label">Elegir imagen</label>
+            <span class="file-help">JPG, PNG o WEBP. Máx. 4 MB.</span>
+          </div>
+
+          <div class="preview-shell">
+            <div class="preview-placeholder" id="preview-placeholder">
+              <span>No hay imagen seleccionada</span>
+            </div>
+            <img id="preview" class="preview-image" alt="Vista previa" hidden />
+          </div>
+
+          <div class="status-line" id="status">Esperando subida...</div>
+
+          <button id="submit-button" type="submit" class="primary-button">Simular subida</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
